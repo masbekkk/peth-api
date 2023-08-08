@@ -17,7 +17,9 @@ class PostController extends Controller
                 'id' => $value->id,
                 'username' => $value->pengguna->username,
                 'post' => $value->post,
-                'updated_at' => date("l, d/m/Y H:i"),
+                'updated_at' => 
+                $value->updated_at,
+                // date("l, d/m/Y H:i"),
             ];
         }
         
