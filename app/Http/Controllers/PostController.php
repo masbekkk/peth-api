@@ -10,7 +10,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $data = Post::with('pengguna')->get();
+        $data = Post::with('pengguna')->orderBy('updated_at', 'DESC')->get();
         $parsedData = [];
         foreach($data as $key => $value) {
             $parsedData[] = [
