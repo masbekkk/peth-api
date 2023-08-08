@@ -18,7 +18,7 @@ class PostController extends Controller
                 'username' => $value->pengguna->username,
                 'post' => $value->post,
                 'updated_at' => 
-                $value->updated_at,
+                $value->updated_at->diffForHumans(),
                 // date("l, d/m/Y H:i"),
             ];
         }
